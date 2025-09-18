@@ -18,6 +18,35 @@
       color: white;
     }
 
+    /* Notification bar */
+    .notification {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 20px;
+      background: linear-gradient(135deg, #2c1a80, #3b2ea3);
+      border: 1px solid #5a4bd6;
+      border-radius: 12px;
+      margin: 20px auto;
+      width: fit-content;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #e0e0ff;
+      box-shadow: 0 4px 15px rgba(90, 75, 214, 0.4);
+      animation: pulse 2s infinite;
+    }
+
+    .notification span {
+      margin-left: 8px;
+    }
+
+    /* Pulse effect */
+    @keyframes pulse {
+      0% { box-shadow: 0 0 8px rgba(90, 75, 214, 0.6); }
+      50% { box-shadow: 0 0 16px rgba(90, 75, 214, 0.9); }
+      100% { box-shadow: 0 0 8px rgba(90, 75, 214, 0.6); }
+    }
+
     /* Navbar container */
     nav {
       display: flex;
@@ -79,6 +108,12 @@
   </style>
 </head>
 <body>
+  <!-- Notification -->
+  <div class="notification">
+    🔔 <span>30% off currently for the client</span>
+  </div>
+
+  <!-- Navbar -->
   <nav>
     <!-- Logo -->
     <div class="logo">
